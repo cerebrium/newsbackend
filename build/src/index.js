@@ -22,9 +22,14 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+// imports
 const express_1 = __importDefault(require("express"));
+const cors_1 = __importDefault(require("cors"));
+// instantiate the app
 const app = express_1.default();
 const port = process.env.PORT || 3001; // default port to listen
+// middleware
+app.use(cors_1.default());
 // controllers
 const newsRoute = __importStar(require("./routes/news"));
 // define a route handler for the default home page

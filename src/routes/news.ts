@@ -11,10 +11,10 @@ export const index = (req: Request, res: Response) => {
     // interface for the data
     interface NewsData {
         source: NewsSource
-        author: string | null
+        author: string
         title: string
         description: string
-        urlToImage: string | null
+        urlToImage: string
         publishedAt: string
         content: string
     }
